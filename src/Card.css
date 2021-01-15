@@ -1,0 +1,61 @@
+.card {
+  width: 300px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 20px 0px;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.19);
+}
+/* .card-image {
+  height: 300px;
+  width: 300px;
+} */
+.card-image > img {
+  object-fit: contain;
+  width: 100%;
+}
+
+.card-title {
+  font-family: "Delius";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 38px;
+  margin: 10px 10px;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.card-date {
+  font-family: "Comic Neue";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 21px;
+  text-align: center;
+  margin: 10px 10px;
+
+  color: rgba(0, 0, 0, 0.6);
+}
+.card-description {
+  font-family: Comic Neue;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.04em;
+  margin: 10px 10px;
+
+  color: rgba(0, 0, 0, 0.7);
+}
+.card-organisedBy {
+  font-family: Comic Neue;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 21px;
+  text-align: right;
+  margin: 10px 10px;
+
+  color: rgba(0, 0, 0, 0.6);
+}
