@@ -60,7 +60,14 @@ function Login() {
     
       const handleMouseDownPassword = (event) => {
         event.preventDefault();
-      };
+  };
+  const styles = {
+    input: {
+      "&:invalid": {
+        border: "red solid 2px"
+      }
+    }
+  };
     return (
         <>
         <Nav/>
@@ -74,7 +81,9 @@ function Login() {
                     Fill the details to get registered <br/> <br/>
                 </div>
                 <div className="event-form-inputs">
-                    <TextField name="name" fullWidth={true} defaultValue="" className="email-input" required id="standard-required" type="text" label="Name" />
+              <TextField name="name" fullWidth={true}
+                inputProps={{pattern:"[a-zA-Z]+[ ][a-zA-Z]+",title:"Enter a valid First name and last name"}}
+                defaultValue="" className="email-input" required id="standard-required" type="text" label="Name" />
                     
                 </div>
                 <div className="event-form-inputs">
@@ -84,7 +93,9 @@ function Login() {
                 <div className="event-form-inputs">
                 <InputLabel htmlFor="standard-adornment-password">Password</InputLabel>
                     <Input required name="password" fullWidth={true}
-            id="standard-adornment-password"
+                id="standard-adornment-password"
+                inputProps={{ pattern:"(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}",
+                title:"Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters"}}
             type={values.showPassword ? 'text' : 'password'}
             value={values.password}
             onChange={handleChange('password')}

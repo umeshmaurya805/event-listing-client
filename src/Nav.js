@@ -31,12 +31,7 @@ function Nav() {
                 <Link to="/New-Event" className="menu-item">Add event</Link>
                             <Link to="/signup" className="menu-item">Sign Up</Link>
 
-                        <div className="loggedUser">Logged in as {User.email}</div> &nbsp;
-                        <div className="btn">
-                     <button className="event-submit" onClick={logout}>
-                         Logout
-                         </button>
-                     </div>                        </div>
+                        </div>
                         :
                         <>
                         <Link to="/" className="menu-item">Home</Link>
@@ -47,8 +42,14 @@ function Nav() {
                         </>
             }
            </div>
-                        </div>
-        </>
+            </div>
+            {
+                User ?
+                <div className="loggedUser">Logged in as {User.email} <a href="#" onClick={logout}>Logout</a></div>
+                :""
+            }
+                        
+            </>
     )
 }
 

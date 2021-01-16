@@ -32,24 +32,31 @@ function Event() {
         try {
             if (user) {
                 const { status, data } = await axios.post('https://event-listing-server.herokuapp.com/api/add-new-event',
-                formData, {
+                    formData, {
                     headers: {
                         'Authorization': `Bearer ${user.token}`
+                    }
+                });
+                console.log(status)
+                if (status === 200) {
+                    alert("Added successfully");
                 }
-            });
-            console.log(status)
-            if (status === 200) {
-                alert("Added successfully");
             }
             else {
                 alert("You must login first");
                 history.push('/login');
                 }
                 setLoading(0);
-        }
+            
+            
         } catch (e) {
             setLoading(0);
+            localStorage.clear();
             alert("Session Expired");
+            history.push('/login');
+            setLoading(0);
+
+
     }
       }
     return (
