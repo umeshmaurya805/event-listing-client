@@ -46,7 +46,6 @@ function Event() {
                 history.push('/login');
                 }
                 setLoading(0);
-
         }
         } catch (e) {
             setLoading(0);

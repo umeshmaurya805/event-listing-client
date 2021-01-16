@@ -30,7 +30,7 @@ function Login() {
     e.preventDefault()
     try {
       setLoading(1);
-      const {status,data} = await axios.post('http://localhost:8000/api/login', LoginObj);
+      const {status,data} = await axios.post('https://event-listing-server.herokuapp.com/api/login', LoginObj);
       if (status === 200) {
         localStorage.setItem("user", JSON.stringify({ token: data.token, name: data.name, email: data.email }));
         history.push('/');

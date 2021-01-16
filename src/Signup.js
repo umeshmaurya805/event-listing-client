@@ -25,7 +25,7 @@ function Login() {
     e.preventDefault()
     try {
       setLoading(1);
-      const {status,data} = await axios.post('http://localhost:8000/api/signup', LoginObj);
+      const {status,data} = await axios.post('https://event-listing-server.herokuapp.com/api/signup', LoginObj);
       console.log(status,data)
       if (status === 200) {
         localStorage.clear();
