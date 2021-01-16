@@ -94,7 +94,7 @@ function Login() {
                 <InputLabel htmlFor="standard-adornment-password">Password</InputLabel>
                     <Input required name="password" fullWidth={true}
                 id="standard-adornment-password"
-                inputProps={{ pattern:"(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}",
+                inputProps={{ pattern:"(?=.*)(?=.*[a-z])(?=.*[A-Z]).{8,}",
                 title:"Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters"}}
             type={values.showPassword ? 'text' : 'password'}
             value={values.password}
