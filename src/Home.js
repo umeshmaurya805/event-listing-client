@@ -15,7 +15,7 @@ function Home() {
             <Nav/>
         <div className="Home">
             <div className="Home-title">
-                    All Upcoming Events    
+                    All Upcoming Events are here   
             </div>
                 <div className="card-container">
                     {Array.from(EventList).map((value, i) => {
